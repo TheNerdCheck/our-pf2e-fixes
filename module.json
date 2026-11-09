@@ -1,0 +1,38 @@
+{
+  "id": "our-pf2e-fixes",
+  "title": "Our PF2e Fixes",
+  "description": "Group fixes for badly automated Pathfinder 2e abilities. Currently: Witch feat Spirit Familiar (Shed Spirit).",
+  "version": "0.1.1",
+  "authors": [
+    {
+      "name": "TheNerdCheck"
+    }
+  ],
+  "url": "https://github.com/TheNerdCheck/our-pf2e-fixes",
+  "manifest": "https://github.com/TheNerdCheck/our-pf2e-fixes/releases/latest/download/module.json",
+  "download": "https://github.com/TheNerdCheck/our-pf2e-fixes/releases/download/0.1.1/module.zip",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "8.6.1"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "socketlib",
+        "type": "module"
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ]
+}
