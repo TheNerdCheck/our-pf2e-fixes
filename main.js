@@ -297,6 +297,13 @@ async function shedSpirit() {
 
 Hooks.once("socketlib.ready", () => {
   socket = socketlib.registerModule(MODULE_ID);
+  if (!socket) {
+    console.error(
+      `${MODULE_ID} | socketlib.registerModule returned nothing. ` +
+        `Check that module.json has "socket": true and that the world was restarted.`
+    );
+    return;
+  }
   socket.register("rollWillSave", rollWillSave);
   socket.register("applyHealing", applyHealing);
 });
